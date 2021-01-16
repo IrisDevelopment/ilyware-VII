@@ -1,4 +1,12 @@
 --ILYWARE CLOUD
+local set = setsimulationradius or set_simulation_radius
+game.RunService.Stepped:Connect(function()
+settings().Physics.AllowSleep = false
+game:GetService("Players").LocalPlayer.ReplicationFocus = workspace
+game:GetService("RunService").Heartbeat:wait()
+game:GetService("Players").LocalPlayer.MaximumSimulationRadius = math.huge
+set(math.huge, math.huge)
+end)
 plr = game.Players.LocalPlayer 
 char = plr.Character
 cloud = char["Toxic CloudAccessory"]
@@ -35,11 +43,11 @@ end)
 for i,v in pairs(humanoid:GetPlayingAnimationTracks()) do
   v:Stop()
 end
-while true do
+game:service"RunService".RenderStepped:connect(function()
   game:GetService('RunService').Heartbeat:wait()
-  RightShoulder.C0=RightShoulder.C0:Lerp(RightShoulderOrigin*CFrame.new(0,0,0)*CFrame.Angles(math.rad(30),0,math.rad(150)),0.1)
-  LeftShoulder.C0=LeftShoulder.C0:Lerp(LeftShoulderOrigin*CFrame.new(0,0,0)*CFrame.Angles(math.rad(30),0,math.rad(-150)),0.1)
-  RightHip.C0=RightHip.C0:Lerp(RightHipOrigin*CFrame.new(0,0,0)*CFrame.Angles(0,0,math.rad(30)-math.sin(tick()*4)/3),0.1)
-  LeftHip.C0=LeftHip.C0:Lerp(LeftHipOrigin*CFrame.new(0,0,0)*CFrame.Angles(0,0,math.rad(30)-math.cos(tick()*4)/2),0.1)
-  RootJoint.C0=RootJoint.C0:Lerp(RootJointOrigin*CFrame.new(0,0,5-math.cos(tick()*4)/1)*CFrame.Angles(math.rad(80),0,0),0.1)
-end
+  RightShoulder.C0=RightShoulder.C0:Lerp(RightShoulderOrigin*CFrame.new(0,0,0)*CFrame.Angles(math.rad(30),0,math.rad(150)-math.sin(tick()*2)/2),0.1)
+  LeftShoulder.C0=LeftShoulder.C0:Lerp(LeftShoulderOrigin*CFrame.new(0,0,0)*CFrame.Angles(math.rad(30),0,math.rad(-150)-math.cos(tick()*2)/2),0.1)
+  RightHip.C0=RightHip.C0:Lerp(RightHipOrigin*CFrame.new(0,0,0)*CFrame.Angles(0,0,math.rad(10)-math.sin(tick()*4.5)/3),0.1)
+  LeftHip.C0=LeftHip.C0:Lerp(LeftHipOrigin*CFrame.new(0,0,0)*CFrame.Angles(0,0,math.rad(30)-math.cos(tick()*4.5)/3),0.1)
+  RootJoint.C0=RootJoint.C0:Lerp(RootJointOrigin*CFrame.new(0,0,7-math.cos(tick()*2)*3)*CFrame.Angles(math.rad(80),0,0),0.1)
+end)
