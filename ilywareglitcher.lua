@@ -192,7 +192,7 @@ Wait()
 		local footsound=0;
 		local WalkSpeed=16;
 		local Combo=0;
-		local Mode='Undead'
+		local Mode='Ilyware'
 		local vaporwaveMode=false;
 		local WingAnim='NebG1'
 		local music;
@@ -232,7 +232,7 @@ Wait()
 		}
 
 --[[
-Undead - Astronaut - Lost Soul
+Ilyware - Astronaut - Lost Soul
 =_-CalmNess-_=
 Control - Synapse X
 =-REBORN-= - Th1rt3en
@@ -246,7 +246,7 @@ PornHub - DEATH
 		--2699922745
 		local modeInfo={
 			{Name="LEGMAN",Walkspeed=35,moveVal=26,Font=Enum.Font.Arcade,StrokeColor=C3.N(.5,.5,.500);Music=1214497430,LeftWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Crimson'.Color,Enum.Material.Neon};WingAnim='StarEF'};
-			{Name="Undead",Walkspeed=16,moveVal=8,Font=Enum.Font.Arcade,StrokeColor=C3.N(.5,.5,.5);Music=2533527428,LeftWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};WingAnim='NebG1'};
+			{Name="fuckfuck",Walkspeed=16,moveVal=8,Font=Enum.Font.Arcade,StrokeColor=C3.N(.5,.5,.5);Music=2533527428,LeftWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};WingAnim='NebG1'};
 			{Name="=-XESTER-=",Walkspeed=16,moveVal=8,Font=Enum.Font.Arcade,StrokeColor=C3.N(.5,.5,.5);Music=1843358057,LeftWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'White'.Color,Enum.Material.Neon};WingAnim='MANGY'};
 			{Name="=_-CalmNess-_=",Walkspeed=16,moveVal=8,Font=Enum.Font.Garamond,StrokeColor=C3.N(255,152,220);Music=577543579,LeftWing={0,BrickColor.new'Black'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Black'.Color,Enum.Material.Neon};WingAnim='NebG6'};
 			{Name="P O W E R",Walkspeed=110,moveVal=25,Font=Enum.Font.Fantasy,StrokeColor=C3.N(174, 122, 89);Music=3080022158,LeftWing={0,BrickColor.new'Neon orange'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Flame reddish orange'.Color,Enum.Material.Neon};WingAnim='NebG4'};
@@ -260,7 +260,7 @@ PornHub - DEATH
 			{Name="2008s Rise",Walkspeed=18,moveVal=9,Font=Enum.Font.Arcade,StrokeColor=C3.RGB(255,152,220);Music=860317713,LeftWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};WingAnim='StarL'};
 			{Name="S P E E D",Walkspeed=200,moveVal=20,Font=Enum.Font.Arcade,StrokeColor=C3.RGB(255,0,220);Music=2932340879,LeftWing={0,BrickColor.new'Crimson'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Pastel light blue'.Color,Enum.Material.Neon};WingAnim='StarA'};
 			--MAJORS--
-			{Name="=-_Lord Allah_-=",Walkspeed=26,moveVal=12,Font=Enum.Font.Gotham,StrokeColor=C3.RGB(255,0,0);Music=1747430851,LeftWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};WingAnim='StarLF'};
+			{Name="Lord",Walkspeed=26,moveVal=12,Font=Enum.Font.Gotham,StrokeColor=C3.RGB(255,0,0);Music=1747430851,LeftWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};WingAnim='StarLF'};
 			{Name="Mayhem",Walkspeed=15,moveVal=9,Font=Enum.Font.Gotham,StrokeColor=C3.RGB(255,0,0);Music=614032233,LeftWing={0,BrickColor.new'Crimson'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Crimson'.Color,Enum.Material.Neon};WingAnim='StarG'};
 			{Name="N U C L E A R - WASTE",Walkspeed=18,moveVal=9,Font=Enum.Font.Gotham,StrokeColor=C3.RGB(0,255,0);Music=798163149,LeftWing={0,BrickColor.new'Lime green'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Lime green'.Color,Enum.Material.Neon};WingAnim='StarLE'};
 			{Name="SCRIPTIONS DEMISE",Walkspeed=45,moveVal=20,Font=Enum.Font.Gotham,StrokeColor=C3.RGB(255,255,0);Music=1591072638,LeftWing={0,BrickColor.new'Gold'.Color,Enum.Material.Neon};RightWing={0,BrickColor.new'Fire Yellow'.Color,Enum.Material.Neon};WingAnim='StarLE'};
@@ -937,7 +937,7 @@ Wait()
 			TextStrokeTransparency=0;
 			Font=Enum.Font.Arcade;
 			TextColor3=C3.N(1,1,1);
-			Text='Undead'
+			Text='Ilyware'
 		})
 
 		function getMode(modeName)
@@ -1425,8 +1425,8 @@ Wait()
 		UIS.InputBegan:connect(function(io,gpe)
 			if(gpe or Attack or data.User~=data.Local)then return end
 			--MODES
-			if(io.KeyCode == Enum.KeyCode.One and Mode~='Undead')then 
-				changeMode'Undead'
+			if(io.KeyCode == Enum.KeyCode.One and Mode~='Ilyware')then 
+				changeMode'Ilyware'
 			elseif(io.KeyCode == Enum.KeyCode.Two and Mode~='=_-CalmNess-_=')then 
 				changeMode'=_-CalmNess-_='
 			elseif(io.KeyCode == Enum.KeyCode.Three and Mode~='Control')then 
@@ -1453,7 +1453,7 @@ Wait()
 				changeMode'LEGMAN'
 			elseif(io.KeyCode == Enum.KeyCode.Nine and Mode~='PornHub')then 
 				changeMode'PornHub'
-			elseif(io.KeyCode == Enum.KeyCode.T and Mode=='Undead')then 
+			elseif(io.KeyCode == Enum.KeyCode.T and Mode=='Ilyware')then 
 				changeMode'Astronaut'
 			elseif(io.KeyCode == Enum.KeyCode.T and Mode=='Astronaut')then 
 				changeMode'THE CHOSEN ONE'
@@ -1472,7 +1472,7 @@ Wait()
 			elseif(io.KeyCode == Enum.KeyCode.V and Mode=='2008s Rise')then 
 				changeMode'N U C L E A R - WASTE'
 			elseif(io.KeyCode == Enum.KeyCode.R and Mode=='2008s Rise')then 
-				changeMode'=-_Lord Allah_-='
+				changeMode'Lord'
 
 			elseif(io.KeyCode == Enum.KeyCode.T and Mode=='PornHub')then 
 				changeMode'DEATH'
@@ -1865,7 +1865,7 @@ Wait()
 
 			if(State == 'Idle')then
 				if(Mode=='SYNAPSE-SCRIPTION' and NeutralAnims and not vaporwaveMode)then Change = 0.1+music.PlaybackLoudness/200 else Change = 1 end
-				if(Mode=='Undead')then
+				if(Mode=='Ilyware')then
 					local Alpha = .1
 					if(NeutralAnims)then	
 						RJ.C0 = RJ.C0:lerp(CF.N(-0.1,-0.1-.1*M.S(Sine/36),0.6)*CF.A(M.R(55.3+2.5*M.C(Sine/36)),M.R(0),M.R(0)),Alpha)
@@ -2485,7 +2485,7 @@ Wait()
 						end
 					end
 
-				elseif(Mode=='=-_Lord Allah_-=')then
+				elseif(Mode=='Lord')then
 					local Alpha = .1
 					if(NeutralAnims)then
 						GotEffect{
